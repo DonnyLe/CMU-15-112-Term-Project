@@ -61,7 +61,7 @@ def appStarted(app):
     app.buttonList = [app.playGameButton, app.aimodeButton]
     app.mode = "mainMenu"
     app.username = None
-    app.data = readFile("termproject/data.txt")
+    app.data = readFile("data.txt")
     app.timerDelay = 10
     app.time = 0
     
@@ -158,8 +158,8 @@ def writeFile(path, contents):
 def writeContents(app):
     if app.username != None:
         contentsToWrite = app.data + f'{app.username},{app.score}/'
-        writeFile("termproject/data.txt", contentsToWrite)
-        app.data = readFile("termproject/data.txt")
+        writeFile("data.txt", contentsToWrite)
+        app.data = readFile("data.txt")
 
 #reads the data and organizes into a dictionary
 def readData(app):
